@@ -1,4 +1,5 @@
 public class ArrayOps {
+
   public static int sum(int[] arr){
     int result = 0;
     for(int i = 0; i < arr.length; i++){
@@ -6,8 +7,20 @@ public class ArrayOps {
     }
     return result;
   }
+
+  public static  int largest(int[] arr){
+    int largest = arr[0];
+    for (int i = 0; i < arr.length; i++) {
+      if(arr[i] > largest){
+        largest = arr[i];
+      }
+    }
+    return largest;
+  }
+
   public static void main(String[] args) {
     int[] trial = {1,2,3,4,5,6,7,8,9,10};
     System.out.println(sum(trial));
+    System.out.println(largest(trial));
   }
 }
