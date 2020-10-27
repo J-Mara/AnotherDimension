@@ -39,9 +39,14 @@ public class ArrayOps {
     return result;
   }
 
-  // public static  int[] largestInRows(int[][] matrix){
-  //
-  // }
+  public static  int[] largestInRows(int[][] matrix){
+    int[] result;
+    result = new int[matrix.length];
+    for (int i = 0; i < matrix.length; i++) {
+      result[i] = largest(matrix[i]);
+    }
+    return result;
+  }
 
   public static void main(String[] args) {
     int[] arr1 = {};
@@ -54,5 +59,6 @@ public class ArrayOps {
     System.out.println(sum(arr5));
     System.out.println(largest(arr5));
     System.out.println(arrToString(sumRows(b)));
+    System.out.println(arrToString(largestInRows(a)));
   }
 }
