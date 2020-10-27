@@ -1,5 +1,17 @@
 public class ArrayOps {
 
+  public static String arrToString(int[] arr){
+    String result = "{";
+    if(arr.length < 1){
+      return "{}";
+    }
+    for(int i = 0; i < arr.length-1; i++){
+      result += arr[i] + ", ";
+    }
+    result += arr[arr.length-1] + "}";
+    return result;
+  }
+
   public static int sum(int[] arr){
     int result = 0;
     for(int i = 0; i < arr.length; i++){
@@ -27,6 +39,10 @@ public class ArrayOps {
     return result;
   }
 
+  // public static  int[] largestInRows(int[][] matrix){
+  //
+  // }
+
   public static void main(String[] args) {
     int[] arr1 = {};
     int[] arr2 = {1,2};
@@ -37,6 +53,6 @@ public class ArrayOps {
     int[][] b = {arr1, arr2, arr3, arr4, arr5};
     System.out.println(sum(arr5));
     System.out.println(largest(arr5));
-    System.out.println(sumRows(b));
+    System.out.println(arrToString(sumRows(b)));
   }
 }
