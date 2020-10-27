@@ -62,6 +62,15 @@ public class ArrayOps {
     return result;
   }
 
+  public static boolean isRowMagic(int[][] matrix){
+    for(int i = 0; i < sumRows(matrix).length; i++){
+      if(sumRows(matrix)[i] != sumRows(matrix)[0]){
+        return false;
+      }
+    }
+    return true;
+  }
+
   public static void main(String[] args) {
     int[] arr1 = {};
     int[] arr2 = {1,2};
@@ -76,5 +85,7 @@ public class ArrayOps {
     System.out.println(arrToString(sumRows(b)));
     System.out.println(arrToString(largestInRows(a)));
     System.out.println(arrToString(sumCols(c)));
+    System.out.println(isRowMagic(b));
+    System.out.println(isRowMagic(c));
   }
 }
