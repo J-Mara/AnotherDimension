@@ -48,6 +48,20 @@ public class ArrayOps {
     return result;
   }
 
+  public static int[] sumCols(int[][] matrix){
+    int[] result;
+    int counter = 0;
+    result = new int[matrix[0].length];
+    for (int i = 0; i < matrix[0].length; i++) {
+      for (int j = 0; j < matrix.length; j++) {
+        counter += matrix[j][i];
+      }
+      result[i] = counter;
+      counter = 0;
+    }
+    return result;
+  }
+
   public static void main(String[] args) {
     int[] arr1 = {};
     int[] arr2 = {1,2};
@@ -56,9 +70,11 @@ public class ArrayOps {
     int[] arr5 = {1,2,3,4,5};
     int[][] a = {arr3, arr5};
     int[][] b = {arr1, arr2, arr3, arr4, arr5};
+    int[][] c = {arr4, arr4, arr4};
     System.out.println(sum(arr5));
     System.out.println(largest(arr5));
     System.out.println(arrToString(sumRows(b)));
     System.out.println(arrToString(largestInRows(a)));
+    System.out.println(arrToString(sumCols(c)));
   }
 }
