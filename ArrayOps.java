@@ -89,23 +89,23 @@ public class ArrayOps {
     return rowSum == colSum;
   }
 
-  public static void main(String[] args) {
-    int[] arr1 = {};
-    int[] arr2 = {1,2};
-    int[] arr3 = {1,2,3};
-    int[] arr4 = {1,2,3,4};
-    int[] arr5 = {1,2,3,4,5};
-    int[][] a = {arr3, arr5};
-    int[][] b = {arr1, arr2, arr3, arr4, arr5};
-    int[][] c = {arr4, arr4, arr4};
-    System.out.println(sum(arr5));
-    System.out.println(largest(arr5));
-    System.out.println(arrToString(sumRows(b)));
-    System.out.println(arrToString(largestInRows(a)));
-    System.out.println(arrToString(sumCols(c)));
-    System.out.println(isRowMagic(b));
-    System.out.println(isRowMagic(c));
-    System.out.println(isColMagic(c));
-    System.out.println(isLocationMagic(c, 2, 3));
-  }
+  // public static void main(String[] args) {
+  //   int[] arr1 = {};
+  //   int[] arr2 = {1,2};
+  //   int[] arr3 = {1,2,3};
+  //   int[] arr4 = {1,2,3,4};
+  //   int[] arr5 = {1,2,3,4,5};
+  //   int[][] a = {arr3, arr5};
+  //   int[][] b = {arr1, arr2, arr3, arr4, arr5};
+  //   int[][] c = {arr4, arr4, arr4};
+  //   System.out.println(sum(arr5));
+  //   System.out.println(largest(arr5));
+  //   System.out.println(arrToString(sumRows(b)));
+  //   System.out.println(arrToString(largestInRows(a)));
+  //   System.out.println(arrToString(sumCols(c)));
+  //   System.out.println(isRowMagic(b));
+  //   System.out.println(isRowMagic(c));
+  //   System.out.println(isColMagic(c));
+  //   System.out.println(isLocationMagic(c, 2, 3));
+  // }
 }
