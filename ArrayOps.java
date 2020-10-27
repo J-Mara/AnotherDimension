@@ -80,6 +80,15 @@ public class ArrayOps {
     return true;
   }
 
+  public static boolean isLocationMagic(int[][] matrix, int row, int col){
+    int rowSum = sum(matrix[row]);
+    int colSum = 0;
+    for(int i = 0; i < matrix.length; i++){
+      colSum += matrix[i][col];
+    }
+    return rowSum == colSum;
+  }
+
   public static void main(String[] args) {
     int[] arr1 = {};
     int[] arr2 = {1,2};
@@ -97,5 +106,6 @@ public class ArrayOps {
     System.out.println(isRowMagic(b));
     System.out.println(isRowMagic(c));
     System.out.println(isColMagic(c));
+    System.out.println(isLocationMagic(c, 2, 3));
   }
 }
